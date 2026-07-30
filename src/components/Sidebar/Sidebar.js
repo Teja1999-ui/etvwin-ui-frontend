@@ -1,27 +1,37 @@
-import { FaHome, FaFilm, FaTv, FaSearch, FaUser, FaList } from "react-icons/fa";
+import {FaHome,FaFilm,FaTv,FaSearch,FaUser,FaList,
+} from "react-icons/fa";
 import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 
-export default function Sidebar({ openMenu, setOpenMenu }) {
+export default function Sidebar({ openMenu, setOpenMenu ,openLogin }) {
   const [active, setActive] = useState("home");
+  // const navigate = useNavigate();
 
   const menuItems = [
     { id: "home", icon: <FaHome />, label: "Home" },
     { id: "tv", icon: <FaTv />, label: "TV Shows" },
     { id: "movies", icon: <FaFilm />, label: "Movies" },
-    { id: "mylist", icon: <FaList />, label: "My List" }
+    { id: "mylist", icon: <FaList />, label: "My List" },
   ];
 
-  // 🔥 MAIN FIX: separate center logic
   const centerId =
     active === "search" || active === "login" ? "home" : active;
 
   const selectedItem =
     menuItems.find((item) => item.id === centerId) || menuItems[0];
 
+  const handleClick = (id) => {
+    setActive(id);
+
+    if (id === "login") {
+      openLogin();
+    }
+  };
+
   const Item = ({ id, icon, label }) => (
     <div
-      onClick={() => setActive(id)} // ✅ keep raw click
+      onClick={() => handleClick(id)}
       className={`menu-item ${active === id ? "active" : ""}`}
       style={menuItem}
     >
@@ -44,11 +54,10 @@ export default function Sidebar({ openMenu, setOpenMenu }) {
         transition: "0.1s",
         display: "flex",
         flexDirection: "column",
-        zIndex: 30
+        zIndex: 30,
       }}
     >
-
-      {/* 🔒 CLOSED MENU */}
+      {/* CLOSED MENU */}
       {!openMenu && (
         <div
           style={{
@@ -57,12 +66,11 @@ export default function Sidebar({ openMenu, setOpenMenu }) {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            gap: "35px"
+            gap: "35px",
           }}
         >
           <Item id="search" icon={<FaSearch />} label="Search" />
 
-          {/* 🔥 ALWAYS SAFE CENTER */}
           <Item
             id={selectedItem.id}
             icon={selectedItem.icon}
@@ -73,7 +81,7 @@ export default function Sidebar({ openMenu, setOpenMenu }) {
         </div>
       )}
 
-      {/* 📂 OPEN MENU */}
+      {/* OPEN MENU */}
       {openMenu && (
         <>
           <div className="menu-top" style={{ padding: "60px 20px 10px" }}>
@@ -87,7 +95,7 @@ export default function Sidebar({ openMenu, setOpenMenu }) {
               alignItems: "center",
               gap: "29px",
               flex: 1,
-              justifyContent: "center"
+              justifyContent: "center",
             }}
           >
             {menuItems.map((item) => (
@@ -109,12 +117,11 @@ export default function Sidebar({ openMenu, setOpenMenu }) {
   );
 }
 
-/* KEEP YOUR STYLE */
 const menuItem = {
   display: "flex",
   alignItems: "center",
   gap: "19px",
   cursor: "pointer",
   padding: "10px 15px",
-  position: "relative"
+  position: "relative",
 };

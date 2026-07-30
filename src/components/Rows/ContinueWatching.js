@@ -28,7 +28,7 @@ const data = [
   },
   {
     title: "Show 1",
-    img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/LcGOV4zbrU/h2.webp",
+    img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260718/Q9HSwbKGO0/h2.webp",
     progress: 60,
     duration: "2m left",
   },
@@ -40,7 +40,7 @@ const data = [
   },
   {
     title: "Show 3",
-    img: "	https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/LcGAGPb3T6/h2.webp",
+    img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260704/Pm2eVZqgNM/h2.webp",
     progress: 75,
     duration: "5m left",
   },

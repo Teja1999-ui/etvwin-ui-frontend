@@ -5,7 +5,7 @@ const data = [
   { img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260225/MJhbz7cAd6/v1.webp" },
   { img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260225/MJ1jOIpmWu/v1.webp" },
   { img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/Lc7j9ynpQG/v1.webp" },
-  { img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260212/LxthJEEmjA/v1.webp" },
+  { img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260722/QFsYDGOkfw/v1.webp" },
   { img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/LcGOKNd2si/v1.webp" },
   { img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260401/NG11YWLrxA/v1.webp" },
   { img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/Lc7rIMINHs/v1.webp" },

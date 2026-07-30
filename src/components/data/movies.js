@@ -21,7 +21,7 @@ export const trending = [
     year: "2025"
   },
   {
-    img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260225/MK3PrSSo9A/v1.webp",
+    img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260722/QEy0A5GLfk/v1.webp",
     title: "Anaganaga",
     genre: "Drama",
     duration: "2h 16m",
@@ -35,7 +35,7 @@ export const trending = [
     year: "2025"
   },
   {
-    img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260212/LxthJEEmjA/v1.webp",
+    img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260722/QExtoMm8nY/v1.webp",
     title: "Constable Kanakam ",
     genre: "Thriller",
     duration: "Season 2",
@@ -91,7 +91,7 @@ export const trending = [
     year: "2024"
   },
   {
-    img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/Lc7OaZ61jM/v1.webp",
+    img: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260720/QBq5X12T1k/v1.webp",
     title: "Committee Kurrollu",
     genre: "Drama",
     duration: "2h 33m",
@@ -522,8 +522,8 @@ export const moreLikeThis1 = [
      rating: " [ U/A]"  
   },
    {
-    vertical: "	https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260225/MK3PrSSo9A/v1.webp",
-    horizontal: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/Lc7fXkpSyW/h1.jpg",
+    vertical: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260225/MJ1jOIpmWu/v1.webp",
+    horizontal: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/Lc7qdJYUBU/h1.jpg",
     logo: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260227/MMlhySAprk/t1.webp",
      year: "2025",
      genre: "Drama",
@@ -532,8 +532,8 @@ export const moreLikeThis1 = [
   
   },
    {
-    vertical: "	https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260212/LxthJEEmjA/v1.webp",
-    horizontal: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/LcGOUDd1PM/h1.jpg",
+    vertical: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260722/QExtoMm8nY/v1.webp",
+    horizontal: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260722/QExtU3JwfI/h1.webp",
     logo: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260227/MMpZqJtY9I/t1.webp",
      year: "2025",
      genre: "Thriller",

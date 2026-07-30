@@ -30,7 +30,7 @@ const data = [
     genre: "Thriller",
     
     desc: "Kanakam, a brave young woman, becomes the first lady constable from her village. When she's posted t...",
-    image: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260130/LcGOUDd1PM/h1.jpg",
+    image: "https://dxkcfokobeg0u.cloudfront.net/v1/images/banner/videos/20260722/QExtU3JwfI/h1.webp",
   },
 
    {

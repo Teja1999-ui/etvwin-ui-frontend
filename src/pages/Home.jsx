@@ -5,92 +5,89 @@ import Row from "../components/Rows/VerticalRow";
 import MoreLikeThis from "../components/Rows/ExpandedRow";
 import ContinueWatching from "../components/Rows/ContinueWatching";
 import CurvedCarousel from "../components/Rows/CurvedCarousel";
-
+import Login from "../components/Login/Login";
 
 import {
   trending,
   recent,
   originals,
-  moreLikeThis,
-  evergreen,
   moreLikeThis1,
   moreLikeThis2,
   blockbuster,
   katha,
-  suprise
+  suprise,
 } from "../components/data/movies";
+
 import Top10 from "../components/Rows/Top10";
 import GlassCard from "../components/Rows/GlassCard";
 
-
-
-
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   return (
     <div
       style={{
         background: "#000",
-        color: "white",
+        color: "#fff",
         minHeight: "100vh",
-        overflowX: "hidden"
+        overflowX: "hidden",
       }}
     >
-      {/* Sidebar */}
-      <Sidebar openMenu={openMenu} setOpenMenu={setOpenMenu} />
+      <Sidebar
+        openMenu={openMenu}
+        setOpenMenu={setOpenMenu}
+        openLogin={() => setShowLogin(true)}
+      />
 
-      {/* Banner (ONLY ONCE) */}
       <Banner openMenu={openMenu} />
 
-      {/* Content */}
       <div
         style={{
           paddingLeft: openMenu ? "250px" : "90px",
-          marginTop: "10px"
+          marginTop: "10px",
         }}
       >
-      
-       
-      
-        {/* Row */}
-        <Row title="Trending Now" data={trending}/>
+        <Row title="Trending Now" data={trending} />
 
-         {/* ✅ ADD HERE */}
         <ContinueWatching />
 
-        <Row title="Recently Added" data={recent}/>
+        <Row title="Recently Added" data={recent} />
 
-        {/* More Like This (NEW) */}
         <div className="section new-section">
+          <MoreLikeThis title="Feel Good" data={moreLikeThis1} />
 
-        <MoreLikeThis title = "Feel good " data={moreLikeThis1}/>
+          <CurvedCarousel />
 
-        {/* ✅ ADD HERE */}
-        <CurvedCarousel />
+          <Row title="Original Films" data={originals} />
 
+          <MoreLikeThis
+            title="More Like This"
+            data={moreLikeThis2}
+          />
 
-        <Row title="Original Films" data={originals}/>
+          <Row title="Blockbuster Hits" data={blockbuster} />
 
-        <MoreLikeThis title = "More Like this  " data={moreLikeThis2}/>
+          <Top10 />
 
-        <Row title="Blockbuster Hits" data={blockbuster}/>
-          {/* ✅ ADD HERE */}
-        <Top10 />
-        
-        <Row title="katha Sudha" data={katha}/>
-        
-  
-          {/* ✅ ADD HERE */}
-       <GlassCard title="Popular Movies" />
+          <Row title="Katha Sudha" data={katha} />
 
-       <Row title="Suprise Stories" data={suprise}/>
-       
+          <GlassCard title="Popular Movies" />
+
+          <Row title="Surprise Stories" data={suprise} />
         </div>
-      
-      
-
       </div>
+
+      {showLogin && (
+        <div
+          className="auth-popup-overlay"
+          onClick={() => setShowLogin(false)}
+        >
+          <div onClick={(e) => e.stopPropagation()}>
+            <Login onClose={() => setShowLogin(false)} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
